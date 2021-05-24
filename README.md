@@ -1,4 +1,4 @@
-# swadmin
+# Build Status
 [![Build status](https://ci.appveyor.com/api/projects/status/425ausk22hjcju5p?svg=true)](https://ci.appveyor.com/project/hendrysa/swadmin)
 
 # Original Repo
