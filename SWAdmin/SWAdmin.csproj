@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5425A265-C467-4215-AA52-D9CA496B96B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SWAdmin</RootNamespace>
+    <AssemblyName>SWAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v20.1" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1" />
+    <Reference Include="DevExpress.Data.v20.1" />
+    <Reference Include="DevExpress.Dialogs.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core" />
+    <Reference Include="DevExpress.Utils.v20.1" />
+    <Reference Include="DevExpress.XtraBars.v20.1" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core" />
+    <Reference Include="DevExpress.XtraDialogs.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FastMember, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FastMember.1.5.0\lib\net461\FastMember.dll</HintPath>
+    </Reference>
+    <Reference Include="GoogleTranslateFreeApi">
+      <HintPath>..\..\..\..\Downloads\GoogleTranslateFreeApi-master\GoogleTranslateFreeApi\bin\Debug\netstandard1.1\GoogleTranslateFreeApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extension.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SWReader.cs" />
+    <Compile Include="SWString.cs" />
+    <Compile Include="SWWriter.cs" />
+    <Compile Include="TableStruct\BaseStruct.cs" />
+    <Compile Include="TableStruct\Client\TBAkashicMakeClient.cs" />
+    <Compile Include="TableStruct\Client\TBAkashicRecordsClient.cs" />
+    <Compile Include="TableStruct\Client\TBBuffClient.cs" />
+    <Compile Include="TableStruct\Client\TBTitleStringClient.cs" />
+    <Compile Include="TableStruct\Client\TBNPCClient.cs" />
+    <Compile Include="TableStruct\Client\TBRandomGetClient.cs" />
+    <Compile Include="TableStruct\Client\tb_Dye.cs" />
+    <Compile Include="TableStruct\Client\tb_Item_SetItem.cs" />
+    <Compile Include="TableStruct\Client\tb_Shop_String.cs" />
+    <Compile Include="TableStruct\Client\tb_PC_Costume.cs" />
+    <Compile Include="TableStruct\Client\tb_PC_Akashic.cs" />
+    <Compile Include="TableStruct\Client\tb_Notice.cs" />
+    <Compile Include="TableStruct\Client\tb_PC_Reward_System_Month.cs" />
+    <Compile Include="TableStruct\Client\tb_Defensive_Weapon.cs" />
+    <Compile Include="TableStruct\Client\tb_SFX_BattleMaterial.cs" />
+    <Compile Include="TableStruct\Client\tb_Equalizer_Info.cs" />
+    <Compile Include="TableStruct\Client\tb_Achievement_begin.cs" />
+    <Compile Include="TableStruct\Client\tb_change_tab.cs" />
+    <Compile Include="TableStruct\Client\tb_Character_Info.cs" />
+    <Compile Include="TableStruct\Client\tb_Quest_Episode.cs" />
+    <Compile Include="TableStruct\Client\tb_Maze_Info.cs" />
+    <Compile Include="TableStruct\Client\tb_Common.cs" />
+    <Compile Include="TableStruct\Client\tb_Class_form.cs" />
+    <Compile Include="TableStruct\Client\tb_Cinema_String.cs" />
+    <Compile Include="TableStruct\Client\tb_Aura.cs" />
+    <Compile Include="TableStruct\Client\tb_Title_Info.cs" />
+    <Compile Include="TableStruct\Client\tb_Talk_List.cs" />
+    <Compile Include="TableStruct\Client\tb_Talk.cs" />
+    <Compile Include="TableStruct\Client\tb_soul_metry.cs" />
+    <Compile Include="TableStruct\Client\tb_Class_Speech.cs" />
+    <Compile Include="TableStruct\Client\tb_Booster.cs" />
+    <Compile Include="TableStruct\Client\tb_Skill.cs" />
+    <Compile Include="TableStruct\Client\TBSpeechString.cs" />
+    <Compile Include="TableStruct\Client\tb_UI_String.cs" />
+    <Compile Include="TableStruct\Client\tb_SystemMail.cs" />
+    <Compile Include="TableStruct\Client\tb_Buff_Script.cs" />
+    <Compile Include="TableStruct\Client\tb_Booster_Script.cs" />
+    <Compile Include="TableStruct\Client\Tb_Akashic_Slot_Extend.cs" />
+    <Compile Include="TableStruct\Client\TBSkillScriptClient.cs" />
+    <Compile Include="TableStruct\Client\TBChattingCommandClient.cs" />
+    <Compile Include="TableStruct\Client\TBSpeechTagClient.cs" />
+    <Compile Include="TableStruct\Client\TBSpeechClient.cs" />
+    <Compile Include="TableStruct\Client\TBNameFilterClient.cs" />
+    <Compile Include="TableStruct\Client\TBMazeRewardGoldDirectClient.cs" />
+    <Compile Include="TableStruct\Client\TBLoadingImgClient.cs" />
+    <Compile Include="TableStruct\Client\TBAppearanceClient.cs" />
+    <Compile Include="TableStruct\Client\TBAchievementScriptClient.cs" />
+    <Compile Include="TableStruct\Client\TBAchievementClient.cs" />
+    <Compile Include="TableStruct\TBACHIEVEMENTBEGINServer.cs" />
+    <Compile Include="TableStruct\TBACHIEVEMENTEMBLEMServer.cs" />
+    <Compile Include="TableStruct\TBAKASHICCOMBINATIONServer.cs" />
+    <Compile Include="TableStruct\TBAKASHICDISASSEMBLEServer.cs" />
+    <Compile Include="TableStruct\TBAKASHICRANDOMGROUPINServer.cs" />
+    <Compile Include="TableStruct\TBAKASHICRANDOMGROUPServer.cs" />
+    <Compile Include="TableStruct\TBAkashicRecordsServer.cs" />
+    <Compile Include="TableStruct\TBAKASHICSLOTEXTENDServer.cs" />
+    <Compile Include="TableStruct\TBAPPEARANCEServer.cs" />
+    <Compile Include="TableStruct\TBAURAServer.cs" />
+    <Compile Include="TableStruct\TBBANKSLOTEXTENDServer.cs" />
+    <Compile Include="TableStruct\TBBATTLEARENAINFOServer.cs" />
+    <Compile Include="TableStruct\TBBOOSTERServer.cs" />
+    <Compile Include="TableStruct\TBBROACHCOMPOSERANKServer.cs" />
+    <Compile Include="TableStruct\TBBROACHCOMPOSETHEMEServer.cs" />
+    <Compile Include="TableStruct\TBBROACHCOMPOSETYPEServer.cs" />
+    <Compile Include="TableStruct\TBBROACHDATAServer.cs" />
+    <Compile Include="TableStruct\TBBROACHSETServer.cs" />
+    <Compile Include="TableStruct\TBCHANGEMOBIDServer.cs" />
+    <Compile Include="TableStruct\TBCHARACTERPARTSServer.cs" />
+    <Compile Include="TableStruct\TBCHECKACCESSREWARDServer.cs" />
+    <Compile Include="TableStruct\TBCHECKATTENDANCEINFOServer.cs" />
+    <Compile Include="TableStruct\TBCHECKATTENDANCEREWARDServer.cs" />
+    <Compile Include="TableStruct\TBCHECKATTENDANCESTREAKServer.cs" />
+    <Compile Include="TableStruct\TBCLASSBATTLEROLEServer.cs" />
+    <Compile Include="TableStruct\TBCOLORServer.cs" />
+    <Compile Include="TableStruct\TBCOMBOBUFFServer.cs" />
+    <Compile Include="TableStruct\TBCOSTUMESOCKETServer.cs" />
+    <Compile Include="TableStruct\TBCREATECLOTHServer.cs" />
+    <Compile Include="TableStruct\TBCREATEOPTIONServer.cs" />
+    <Compile Include="TableStruct\TBCREDITRAISEServer.cs" />
+    <Compile Include="TableStruct\TBCULTIVATIONServer.cs" />
+    <Compile Include="TableStruct\TBCUSTOMERBENEFITServer.cs" />
+    <Compile Include="TableStruct\TBCUSTOMERGRADEServer.cs" />
+    <Compile Include="TableStruct\TBDAILYMAZEPORTALServer.cs" />
+    <Compile Include="TableStruct\TBDAYEVENTBOOSTERServer.cs" />
+    <Compile Include="TableStruct\TBDECKBONUSServer.cs" />
+    <Compile Include="TableStruct\TBDEFENSIVEWEAPONServer.cs" />
+    <Compile Include="TableStruct\TBDISASSEMBLEServer.cs" />
+    <Compile Include="TableStruct\TBDISTRICTServer.cs" />
+    <Compile Include="TableStruct\TBDISTRICTTRANSPORTServer.cs" />
+    <Compile Include="TableStruct\TBDIVERGENCEServer.cs" />
+    <Compile Include="TableStruct\TBDIVISIONRANKREWARDServer.cs" />
+    <Compile Include="TableStruct\TBDROPRATELEVELServer.cs" />
+    <Compile Include="TableStruct\TBDROPRATEMEMBERServer.cs" />
+    <Compile Include="TableStruct\TBDROPRATEMOBServer.cs" />
+    <Compile Include="TableStruct\TBDSPOINTServer.cs" />
+    <Compile Include="TableStruct\TBDYEINFOServer.cs" />
+    <Compile Include="TableStruct\TBDYEServer.cs" />
+    <Compile Include="TableStruct\TBEchelonServer.cs" />
+    <Compile Include="TableStruct\TBDayEventServer.cs" />
+    <Compile Include="TableStruct\TBEVENTCONDITIONServer.cs" />
+    <Compile Include="TableStruct\TBFACTIONServer.cs" />
+    <Compile Include="TableStruct\TBFRAGMENTEXCHANGEServer.cs" />
+    <Compile Include="TableStruct\TBFRAGMENTEXTRACTIONServer.cs" />
+    <Compile Include="TableStruct\TBGACHAGROUPServer.cs" />
+    <Compile Include="TableStruct\TBGEARRATEServer.cs" />
+    <Compile Include="TableStruct\TBGESTUREServer.cs" />
+    <Compile Include="TableStruct\TBHELPERREWARDServer.cs" />
+    <Compile Include="TableStruct\TBHELPERServer.cs" />
+    <Compile Include="TableStruct\TBHIDDENEVENTServer.cs" />
+    <Compile Include="TableStruct\TBINFINITETOWERServer.cs" />
+    <Compile Include="TableStruct\TBINTERACTIONITEMServer.cs" />
+    <Compile Include="TableStruct\TBINTERACTIONOBJECTServer.cs" />
+    <Compile Include="TableStruct\TBINVENSLOTEXTENDServer.cs" />
+    <Compile Include="TableStruct\TBITEMCLASSREWARDLINKServer.cs" />
+    <Compile Include="TableStruct\TBITEMCOSTUMESETServer.cs" />
+    <Compile Include="TableStruct\TBITEMCOUNTBOXGROUPServer.cs" />
+    <Compile Include="TableStruct\TBITEMCOUNTBOXServer.cs" />
+    <Compile Include="TableStruct\TBITEMENDURANCEServer.cs" />
+    <Compile Include="TableStruct\TBITEMEXTRACTIONServer.cs" />
+    <Compile Include="TableStruct\TBITEMLIMITServer.cs" />
+    <Compile Include="TableStruct\TBITEMPACKAGEServer.cs" />
+    <Compile Include="TableStruct\TBItemRandomBoxServer.cs" />
+    <Compile Include="TableStruct\TBBuffServer.cs" />
+    <Compile Include="TableStruct\TBITEMRANKRATEServer.cs" />
+    <Compile Include="TableStruct\TBITEMREPAIRServer.cs" />
+    <Compile Include="TableStruct\TBITEMSCRIPTServer.cs" />
+    <Compile Include="TableStruct\TBITEMSETITEMServer.cs" />
+    <Compile Include="TableStruct\TBITEMSIMILARGROUPServer.cs" />
+    <Compile Include="TableStruct\TBITEMTITLECHANGEServer.cs" />
+    <Compile Include="TableStruct\TBITEMTITLEGROUPServer.cs" />
+    <Compile Include="TableStruct\TBITEMTITLEServer.cs" />
+    <Compile Include="TableStruct\TBITEMTITLEVALUEServer.cs" />
+    <Compile Include="TableStruct\TBLEAGUEINFOServer.cs" />
+    <Compile Include="TableStruct\TBLEAGUESKILLServer.cs" />
+    <Compile Include="TableStruct\TBLEVELMAILServer.cs" />
+    <Compile Include="TableStruct\TBLEVELUPPOINTServer.cs" />
+    <Compile Include="TableStruct\TBMAKEServer.cs" />
+    <Compile Include="TableStruct\TBMAZEENTERCOUNTGROUPServer.cs" />
+    <Compile Include="TableStruct\TBMazeOpenGroupServer.cs" />
+    <Compile Include="TableStruct\TBDropGroupCharacterServer.cs" />
+    <Compile Include="TableStruct\TBDropGroupServer.cs" />
+    <Compile Include="TableStruct\TBMAZEREWARDDIFFICULTYServer.cs" />
+    <Compile Include="TableStruct\TBMAZEREWARDLEVELServer.cs" />
+    <Compile Include="TableStruct\TBMAZEREWARDNORMALServer.cs" />
+    <Compile Include="TableStruct\TBMAZEREWARDPARTYVALUEServer.cs" />
+    <Compile Include="TableStruct\TBMAZEREWARDRANKServer.cs" />
+    <Compile Include="TableStruct\TBMAZEREWARDREVISIONServer.cs" />
+    <Compile Include="TableStruct\TBMAZEREWARDSOULVAPERServer.cs" />
+    <Compile Include="TableStruct\TBMAZEREWARDSTANDARDServer.cs" />
+    <Compile Include="TableStruct\TBMAZEREWARDTIMEServer.cs" />
+    <Compile Include="TableStruct\TBMILEAGEServer.cs" />
+    <Compile Include="TableStruct\TBMODEBICLASSCORRECTIONServer.cs" />
+    <Compile Include="TableStruct\TBMODEBICLASSSTARTSKILLServer.cs" />
+    <Compile Include="TableStruct\TBMODEBIREWARDServer.cs" />
+    <Compile Include="TableStruct\TBMODEBISECTORINFOServer.cs" />
+    <Compile Include="TableStruct\TBMODEBISKILLEDITServer.cs" />
+    <Compile Include="TableStruct\TBMODEBIUPGRADEGROUPServer.cs" />
+    <Compile Include="TableStruct\TBMODEBIUPGRADEServer.cs" />
+    <Compile Include="TableStruct\TBMODECARDMATCHCARDServer.cs" />
+    <Compile Include="TableStruct\TBMODECARDMATCHRULEServer.cs" />
+    <Compile Include="TableStruct\TBMODEDEFENCEServer.cs" />
+    <Compile Include="TableStruct\TBMODEDISTRICT6DATEServer.cs" />
+    <Compile Include="TableStruct\TBMODEDISTRICT6Server.cs" />
+    <Compile Include="TableStruct\TBMODEOPERATIONServer.cs" />
+    <Compile Include="TableStruct\TBMODESURVIVALServer.cs" />
+    <Compile Include="TableStruct\TBMONSTERBROKENPARTSServer.cs" />
+    <Compile Include="TableStruct\TBMONSTEREXPServer.cs" />
+    <Compile Include="TableStruct\TBMONSTERPARTSServer.cs" />
+    <Compile Include="TableStruct\TBMONSTERSPAWNServer.cs" />
+    <Compile Include="TableStruct\TBMONSTERWEAPONServer.cs" />
+    <Compile Include="TableStruct\TBMYROOMFURNITUREServer.cs" />
+    <Compile Include="TableStruct\TBMYROOMGREEDServer.cs" />
+    <Compile Include="TableStruct\TBMYROOMINFOServer.cs" />
+    <Compile Include="TableStruct\TBNAMEFILTERServer.cs" />
+    <Compile Include="TableStruct\TBNPCPARTSServer.cs" />
+    <Compile Include="TableStruct\TBOPERATIONINFOServer.cs" />
+    <Compile Include="TableStruct\TBOPTIONSTRINGServer.cs" />
+    <Compile Include="TableStruct\TBPARTYEXPLEVELServer.cs" />
+    <Compile Include="TableStruct\TBPARTYEXPMEMBERServer.cs" />
+    <Compile Include="TableStruct\TBPARTYEXPMOBServer.cs" />
+    <Compile Include="TableStruct\TBPARTYREVISEServer.cs" />
+    <Compile Include="TableStruct\TBPCAKASHICServer.cs" />
+    <Compile Include="TableStruct\TBPCCOSTUMEServer.cs" />
+    <Compile Include="TableStruct\TBPCREWARDSYSTEMMONTHServer.cs" />
+    <Compile Include="TableStruct\TBPCREWARDSYSTEMServer.cs" />
+    <Compile Include="TableStruct\TBPOLLENServer.cs" />
+    <Compile Include="TableStruct\TBPROVIDEITEMServer.cs" />
+    <Compile Include="TableStruct\TBQUESTCHAPTERServer.cs" />
+    <Compile Include="TableStruct\TBQUESTCONDITIONServer.cs" />
+    <Compile Include="TableStruct\TBQUESTREWARDServer.cs" />
+    <Compile Include="TableStruct\TBQUESTSEASONServer.cs" />
+    <Compile Include="TableStruct\TBRANDOMCHANGEServer.cs" />
+    <Compile Include="TableStruct\TBRANDOMGETGROUPServer.cs" />
+    <Compile Include="TableStruct\TBRANDOMGETServer.cs" />
+    <Compile Include="TableStruct\TBRANDOMOPTIONServer.cs" />
+    <Compile Include="TableStruct\TBRANKCHANGEServer.cs" />
+    <Compile Include="TableStruct\TBRANKINFOServer.cs" />
+    <Compile Include="TableStruct\TBRANKREWARDServer.cs" />
+    <Compile Include="TableStruct\TBRANKREWARDTOTALPOINTServer.cs" />
+    <Compile Include="TableStruct\TBREINFORCEEXCHANGEServer.cs" />
+    <Compile Include="TableStruct\TBREINFORCEOPTIONServer.cs" />
+    <Compile Include="TableStruct\TBReinforceServer.cs" />
+    <Compile Include="TableStruct\TBItemEvolutionServer.cs" />
+    <Compile Include="TableStruct\TBMazeRewardItemServer.cs" />
+    <Compile Include="TableStruct\TBMazeInfoServer.cs" />
+    <Compile Include="TableStruct\TBDropServer.cs" />
+    <Compile Include="TableStruct\TBAchievementServer.cs" />
+    <Compile Include="TableStruct\Client\TBCashBillingInfoClient.cs" />
+    <Compile Include="TableStruct\TBCashBillingInfoServer.cs" />
+    <Compile Include="TableStruct\Client\TBQuestScriptClient.cs" />
+    <Compile Include="TableStruct\TBMonsterServer.cs" />
+    <Compile Include="TableStruct\TBPhotoItemServer.cs" />
+    <Compile Include="TableStruct\TBNPCServer.cs" />
+    <Compile Include="TableStruct\TBAkashicMakeServer.cs" />
+    <Compile Include="TableStruct\TBREPACKAGECOSTUMEServer.cs" />
+    <Compile Include="TableStruct\TBROOMRANKREWARDServer.cs" />
+    <Compile Include="TableStruct\TBSECTORQUESTServer.cs" />
+    <Compile Include="TableStruct\TBSELECTITEMServer.cs" />
+    <Compile Include="TableStruct\TBSKILLACTIONServer.cs" />
+    <Compile Include="TableStruct\TBSKILLOPTIONServer.cs" />
+    <Compile Include="TableStruct\TBSKILLSLOTEXTENDServer.cs" />
+    <Compile Include="TableStruct\TBSLOTEXTENDServer.cs" />
+    <Compile Include="TableStruct\TBSOCIALITEMServer.cs" />
+    <Compile Include="TableStruct\TBSOCIALMOTIONServer.cs" />
+    <Compile Include="TableStruct\TBSOCKETServer.cs" />
+    <Compile Include="TableStruct\TBSOULGUAGEServer.cs" />
+    <Compile Include="TableStruct\TBSOULMETRYServer.cs" />
+    <Compile Include="TableStruct\TBSOULSTONELEVELUPServer.cs" />
+    <Compile Include="TableStruct\TBSPAWNBOXFRONTLINE01Server.cs" />
+    <Compile Include="TableStruct\TBSPAWNBOXRSQUARE01Server.cs" />
+    <Compile Include="TableStruct\TBSPAWNGROUPServer.cs" />
+    <Compile Include="TableStruct\TBSTATUSServer.cs" />
+    <Compile Include="TableStruct\TBSYSTEMMAILADDServer.cs" />
+    <Compile Include="TableStruct\TBSYSTEMMAILServer.cs" />
+    <Compile Include="TableStruct\TBTALKLISTServer.cs" />
+    <Compile Include="TableStruct\TBTALKServer.cs" />
+    <Compile Include="TableStruct\TBTALKSTRINGServer.cs" />
+    <Compile Include="TableStruct\TBTITLEINFOServer.cs" />
+    <Compile Include="TableStruct\TBTITLEREWARDServer.cs" />
+    <Compile Include="TableStruct\TBTITLESTRINGServer.cs" />
+    <Compile Include="TableStruct\TBTRANSPORTINFOServer.cs" />
+    <Compile Include="TableStruct\TBUNITYEVENTServer.cs" />
+    <Compile Include="TableStruct\TBVERSIONServer.cs" />
+    <Compile Include="TableStruct\TBWARLORDEVENTServer.cs" />
+    <Compile Include="TableStruct\TBWARLORDGUIServer.cs" />
+    <Compile Include="TableStruct\TBWEAPONRATEServer.cs" />
+    <Compile Include="TableStruct\TBWeekDayServer.cs" />
+    <Compile Include="TableStruct\TBDailyMissionServer.cs" />
+    <Compile Include="TableStruct\TBCharacterInfoServer.cs" />
+    <Compile Include="TableStruct\Client\TBCharacterPartsClient.cs" />
+    <Compile Include="TableStruct\TBMazeOpenControlServer.cs" />
+    <Compile Include="TableStruct\TBSpecialMazeOpenServer.cs" />
+    <Compile Include="TableStruct\TBServerInfoServer.cs" />
+    <Compile Include="TableStruct\TBChattingCommandServer.cs" />
+    <Compile Include="TableStruct\TBEqualizerInfoServer.cs" />
+    <Compile Include="TableStruct\TBItemClassifyServer.cs" />
+    <Compile Include="TableStruct\TBCashShopTabServer.cs" />
+    <Compile Include="TableStruct\Client\TBCashShopClient.cs" />
+    <Compile Include="TableStruct\TBCashShopServer.cs" />
+    <Compile Include="TableStruct\Client\TBItemScriptClient.cs" />
+    <Compile Include="TableStruct\Client\TBItemClient.cs" />
+    <Compile Include="TableStruct\TBSKILLServer.cs" />
+    <Compile Include="TableStruct\TBItemServer.cs" />
+    <Compile Include="TableStruct\Client\TBShopClient.cs" />
+    <Compile Include="TableStruct\TBShopServer.cs" />
+    <Compile Include="LoadingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingScreen.Designer.cs">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableStruct\TBWEEKGROUPServer.cs" />
+    <Compile Include="TableStruct\TBWEEKMISSIONServer.cs" />
+    <Compile Include="TableStruct\TBWORLDEVENTREWARDServer.cs" />
+    <Compile Include="TableStruct\TBWORLDEVENTServer.cs" />
+    <Compile Include="TableStruct\tb_Quest_Episode.cs" />
+    <Compile Include="TableStruct\tb_Common.cs" />
+    <Compile Include="Translator.cs" />
+    <Compile Include="WorkerArg.cs" />
+    <Compile Include="WorkerTypeEnum.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
